@@ -11,7 +11,7 @@ class HomeWithJson extends Component {
   state = { 
     movies: moviesList.results,
     searchValue: '',
-    searchResults: [...moviesList.results],
+    searchResults: [...moviesList.results]
   }
 
   handleSearch = (searchValue) => {
@@ -21,10 +21,10 @@ class HomeWithJson extends Component {
 
   searchMovie = (searchValue) => {
     const searchRes = this.state.movies.filter((movie) => {
-      movie.title.includes(searchValue);
+      return movie.title.toLowerCase().includes(searchValue);
     });
-    this.setState({searchResults: [...searchRes]});
     console.log("result:", searchRes);
+    this.setState({searchResults: [...searchRes]});
   }
 
   render() {
@@ -37,7 +37,12 @@ class HomeWithJson extends Component {
           handleSearch={this.handleSearch}
         />
         <p>{this.state.searchValue}</p>
-        <MoviesList movies={this.state.searchResults} />
+        <MoviesList 
+        // movies={this.state.searchResults.length > 0 ? 
+        //         this.state.searchResults 
+        //         : this.state.movies} 
+        movies={this.state.searchResults}
+        />
       </div>
     )
   }

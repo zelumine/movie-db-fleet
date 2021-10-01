@@ -6,8 +6,8 @@ const NavBar = () => {
     <div>
       <nav>
         <NavLink exact to="/">MovieDB <i class="fa-solid fa-film"></i></NavLink>
-        <NavLink exact to="/with-json">Version avec json</NavLink>
-        <NavLink exact to="/with-api">Version avec l'API</NavLink>
+        <NavLink exact to="/with-json">Version with json</NavLink>
+        <NavLink exact to="/with-api">Version with API</NavLink>
       </nav>
     </div>
   )

@@ -1,12 +1,18 @@
 import React from 'react';
 
 const MoviesList = (props) => {
-  const { movies } = props;
+  const { movies, callback } = props;
   
   return (
     <ul className="movies-list">
-      {movies.map(item => (
-        <li key={item.id}>{item.title}</li>
+      {movies.map(movie => (
+        <li 
+          key={movie.id}
+          onClick={callback}
+          data-id={movie.id}
+        >
+          {movie.title}
+        </li>
       ))}
     </ul>
   )

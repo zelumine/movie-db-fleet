@@ -8,6 +8,8 @@ import SearchBar from '../Components/SearchBar';
 import MoviesList from '../Components/MoviesList';
 import MovieDetails from '../Components/MovieDetails';
 
+import '../styles/Home.css';
+
 class HomeWithJson extends Component {
   state = { 
     movies: moviesList.results,
@@ -57,6 +59,9 @@ class HomeWithJson extends Component {
         />
         {this.state.selectedMovie.length > 0 &&
           <MovieDetails movie={this.state.selectedMovie[0]} />
+        }
+        {this.state.selectedMovie.length === 0 &&
+          <h2 className="Home__bigtext">Click on a movie to see its details!</h2>
         }
       </div>
     )

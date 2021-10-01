@@ -1,0 +1,17 @@
+.MoviesList__list {
+  width: 25%;
+  list-style-type: none;
+  margin: 0 20px;
+  padding: 0 0 50px 0;
+  border-right: 2px solid var(--medPurple);
+}
+
+.MoviesList__list li {
+  padding: 5px 0 5px 5px;
+  width: 100%;
+}
+
+.MoviesList__list li:hover {
+  background: var(--medPurple);
+  color: var(--pinkish);
+}

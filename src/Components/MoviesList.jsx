@@ -1,10 +1,11 @@
 import React from 'react';
+import '../styles/MoviesList.css';
 
 const MoviesList = (props) => {
   const { movies, callback } = props;
   
   return (
-    <ul className="movies-list">
+    <ul className="MoviesList__list">
       {movies.map(movie => (
         <li 
           key={movie.id}

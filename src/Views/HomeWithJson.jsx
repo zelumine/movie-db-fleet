@@ -46,7 +46,7 @@ class HomeWithJson extends Component {
     return (
       <div>
         <NavBar />
-        <h1>Coucou depuis la home avec json</h1>
+        <h1>Welcome to the MovieDB - JSON version</h1>
         <SearchBar 
           searchValue={this.state.searchValue}
           handleSearch={this.handleSearch}

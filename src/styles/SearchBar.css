@@ -1,0 +1,27 @@
+.SearchBar {
+  width: 25%;
+  margin: 0 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.SearchBar__input {
+  outline: none;
+  border: none;
+  background: var(--lightPurple);
+  color: var(--darkPurple);
+  border-top-right-radius: 10px;
+  height: 100%;
+  width: 85%;
+  font-size: 1.1em;
+}
+
+.SearchBar__icon {
+  width: 15%;
+  height: 100%;
+  background: var(--lightPurple);
+  color: var(--darkPurple);
+  border-top-left-radius: 10px;
+  padding: 7.5px;
+}

@@ -1,0 +1,25 @@
+.NavBar__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+  background: var(--darkPurple);
+}
+
+.NavBar__nav a {
+  text-decoration: none;
+  color: var(--pinkish);
+  padding: 20px 30px;
+}
+
+.NavBar__versions {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+}
+
+.NavBar__versions a:hover {
+  background: var(--medPurple);
+}

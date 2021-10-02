@@ -8,6 +8,20 @@
   background: var(--darkPurple);
 }
 
+.NavBar__versions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+}
+
+.NavBar__nav a, #logo {
+  text-decoration: none;
+  text-align: center;
+  color: var(--pinkish);
+  padding: 0 20px;
+}
+
 @media (min-width: 600px) {
   .NavBar__nav a, #logo {
     padding: 20px 30px;
@@ -18,19 +32,6 @@
     justify-content: space-around;
     width: 70%;
   }
-}
-
-.NavBar__versions {
-  display: flex;
-  justify-content: space-around;
-  width: 70%;
-}
-
-.NavBar__nav a, #logo {
-  text-decoration: none;
-  text-align: center;
-  color: var(--pinkish);
-  padding: 0 20px;
 }
 
 .NavBar__versions a:hover {

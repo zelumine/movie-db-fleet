@@ -14,7 +14,7 @@ const MovieDetails = (props) => {
   return (
     <div className="MovieDetails">
       <div className="MovieDetails__img-title-block">
-        <img src={`${IMAGE_BASE_URL}${IMAGE_SIZE}${poster_path}`} />
+        <img src={`${IMAGE_BASE_URL}${poster_path}`} />
         <div className="MovieDetails__title-rate-block">
           <h2>{title}</h2>
           <p><b>Rate:</b> {vote_average} / 10</p>

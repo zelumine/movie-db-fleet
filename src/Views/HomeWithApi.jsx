@@ -6,6 +6,8 @@ import SearchBar from '../Components/SearchBar';
 import MoviesList from '../Components/MoviesList';
 import MovieDetails from '../Components/MovieDetails';
 
+import '../styles/Home.css';
+
 // API
 import apiHandler from '../API';
 
@@ -35,8 +37,8 @@ class HomeWithApi extends Component {
       searchRes = apiHandler.getMovies()
       .then(data => {
         this.setState({ 
-          searchResults: [...data.results],
-          selectedMovie: []
+          searchResults: [...data.results],   // get the complete list again to avoid getting the previous results even if we erased the text in the search bar
+          selectedMovie: []     // show the "click to see details" text again
         }); 
       });
     }

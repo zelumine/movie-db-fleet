@@ -8,7 +8,7 @@
   background: var(--darkPurple);
 }
 
-.NavBar__nav a {
+.NavBar__nav a, #logo {
   text-decoration: none;
   color: var(--pinkish);
   padding: 20px 30px;

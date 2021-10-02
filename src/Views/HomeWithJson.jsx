@@ -15,7 +15,6 @@ class HomeWithJson extends Component {
     movies: moviesList.results,
     searchValue: '',
     searchResults: [...moviesList.results],
-    showMovieDetails: false,
     selectedMovie: []
   }
 
@@ -30,7 +29,6 @@ class HomeWithJson extends Component {
     });
 
     this.setState({ 
-      showMovieDetails: !this.state.showMovieDetails,
       selectedMovie: [...selectedMovie]
     });
   }

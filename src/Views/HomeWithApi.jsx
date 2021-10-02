@@ -16,7 +16,7 @@ class HomeWithApi extends Component {
     movies: [],
     searchValue: '',
     searchResults: [],
-    selectedMovie: []
+    selectedMovie: [],
   }
 
   handleSearch = (searchValue) => {
@@ -77,7 +77,8 @@ class HomeWithApi extends Component {
         />
         <MoviesList 
           movies={this.state.searchResults}
-          callback={this.handleClick}
+          handleClick={this.handleClick}
+          handleLoadMore={this.handleLoadMore}
         />
         {this.state.selectedMovie.length > 0 &&
           <MovieDetails movie={this.state.selectedMovie[0]} />

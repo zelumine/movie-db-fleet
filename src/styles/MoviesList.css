@@ -8,12 +8,6 @@
   border-bottom-left-radius: 10px;
 }
 
-@media (min-width: 600px) {
-  .MoviesList__list {
-    width: 25%;
-  }
-}
-
 .MoviesList__list li {
   list-style-type: none;
   padding: 5px 0 5px 5px;
@@ -38,11 +32,28 @@
 }
 
 .MoviesList__btn-prev {
-  margin-left: 30px;
+  margin-left: 20px;
   margin-right: 20%;
 }
 
 .MoviesList__btn-next {
   margin-left: 20%;
-  margin-right: 30px;
+  margin-right: 20px;
+}
+
+
+@media (min-width: 600px) {
+  .MoviesList__list {
+    width: 25%;
+  }
+ 
+  .MoviesList__btn-prev {
+    margin-left: 30px;
+    margin-right: 20%;
+  }
+  
+  .MoviesList__btn-next {
+    margin-left: 20%;
+    margin-right: 30px;
+  }
 }

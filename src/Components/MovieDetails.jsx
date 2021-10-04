@@ -1,5 +1,5 @@
 import React from 'react';
-import { IMAGE_BASE_URL, IMAGE_SIZE } from '../config';
+import { IMAGE_BASE_URL } from '../config';
 import '../styles/MovieDetails.css';
 
 const MovieDetails = (props) => {
@@ -14,7 +14,7 @@ const MovieDetails = (props) => {
   return (
     <div className="MovieDetails">
       <div className="MovieDetails__img-title-block">
-        <img src={`${IMAGE_BASE_URL}${poster_path}`} />
+        <img src={`${IMAGE_BASE_URL}${poster_path}`} alt={title}/>
         <div className="MovieDetails__title-rate-block">
           <h2>{title}</h2>
           <p><b>Rate:</b> {vote_average} / 10</p>

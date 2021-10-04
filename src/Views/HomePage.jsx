@@ -1,15 +1,23 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import '../styles/Home.css'
+
+// Components
+import NavBar from '../Components/NavBar';
+
 const HomePage = () => {
   return (
     <div>
-      <h1>Bienvenue !</h1>
-      <p>Etant donné qu'il fallait faire une version avec le fichier json, 
-        et une en utilisant l'API de TheMovieDB, voici un lien pour chaque version.
-        <br />(au lieu de faire deux repositories)</p>
-      <NavLink to="/with-json">Version avec json</NavLink>
-      <NavLink to="/with-api">Version avec l'API</NavLink>
+      <NavBar />
+      <div className="Home__home-text">
+        <h1>Welcome</h1>
+        <p>Choose a version above or below</p>
+        <div className="Home__links">
+          <NavLink to="/with-json" className="Home__btn-link">Version with JSON</NavLink>
+          <NavLink to="/with-api" className="Home__btn-link">Version with API</NavLink>
+        </div>
+      </div>
     </div>
   )
 }

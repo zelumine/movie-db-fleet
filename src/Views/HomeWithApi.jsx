@@ -17,6 +17,7 @@ class HomeWithApi extends Component {
     searchValue: '',
     searchResults: [],
     selectedMovie: [],
+    page: 1
   }
 
   handleSearch = (searchValue) => {
@@ -56,8 +57,28 @@ class HomeWithApi extends Component {
     this.setState({ selectedMovie: [...selectedMovie] });
   }
 
+  handlePrevClick = () => {
+    this.setState({page: this.state.page - 1});
+    this.handleLoadMoreMovies();
+  }
+
+  handleNextClick = () => {
+    this.setState({page: this.state.page + 1});
+    this.handleLoadMoreMovies();
+  }
+
+  handleLoadMoreMovies = () => {
+    apiHandler.getMovies(this.state.page)
+      .then(data => {
+        this.setState({ 
+          movies: [...data.results],    // got a bit of help from a YouTube tutorial as I had trouble extracting the results
+          searchResults: [...data.results]
+        }); 
+      });
+  }
+
   componentDidMount() {
-    apiHandler.getMovies()
+    apiHandler.getMovies(this.state.page)
       .then(data => {
         this.setState({ 
           movies: [...data.results],    // got a bit of help from a YouTube tutorial as I had trouble extracting the results
@@ -78,7 +99,9 @@ class HomeWithApi extends Component {
         <MoviesList 
           movies={this.state.searchResults}
           handleClick={this.handleClick}
-          handleLoadMore={this.handleLoadMore}
+          handlePrevClick={this.handlePrevClick}
+          handleNextClick={this.handleNextClick}
+          page={this.state.page}
         />
         {this.state.selectedMovie.length > 0 &&
           <MovieDetails movie={this.state.selectedMovie[0]} />

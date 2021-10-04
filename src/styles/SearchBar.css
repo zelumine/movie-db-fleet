@@ -35,7 +35,7 @@
 @media (min-width: 600px) {
   .SearchBar {
     width: 25%;
-    margin-top: 80px;
+    margin-top: 65px;
   }
 
   .SearchBar__input {

@@ -53,7 +53,7 @@ class HomeWithJson extends Component {
         />
         <MoviesList 
           movies={this.state.searchResults}
-          callback={this.handleClick}
+          handleClick={this.handleClick}
         />
         {this.state.selectedMovie.length > 0 &&
           <MovieDetails movie={this.state.selectedMovie[0]} />

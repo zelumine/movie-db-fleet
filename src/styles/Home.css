@@ -10,3 +10,27 @@
     left: 50%;
   }
 }
+
+.Home__home-text p {
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 40px;
+}
+
+.Home__links {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.Home__btn-link {
+  text-align: center;
+  text-decoration: none;
+  margin: 15px 20px;
+  font-size: 2em;
+  padding: 20px;
+  background: var(--darkPurple);
+  color: var(--pinkish);
+  border-radius: 10px;
+}

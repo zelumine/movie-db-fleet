@@ -1,7 +1,6 @@
 .MoviesList__list {
   width: 30%;
-  list-style-type: none;
-  margin: 0 20px;
+  margin: 0 20px 20px;
   padding-bottom: 30px;
   border: 2px solid var(--medPurple);
   border-top: none;
@@ -16,6 +15,7 @@
 }
 
 .MoviesList__list li {
+  list-style-type: none;
   padding: 5px 0 5px 5px;
   width: 100%;
 }
@@ -24,4 +24,25 @@
   background: var(--medPurple);
   color: var(--pinkish);
   cursor: pointer;
+}
+
+.MoviesList__list-btns button{
+  width: 60px;
+  border: none;
+  border-radius: 5px;
+  background: var(--darkPurple);
+  color: var(--pinkish);
+  height: 40px;
+  font-size: 0.95em;
+  margin-top: 15px;
+}
+
+.MoviesList__btn-prev {
+  margin-left: 30px;
+  margin-right: 20%;
+}
+
+.MoviesList__btn-next {
+  margin-left: 20%;
+  margin-right: 30px;
 }
